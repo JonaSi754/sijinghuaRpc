@@ -9,7 +9,19 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>annotation</module>
+        <module>myrpc-annotation</module>
+        <module>myrpc-common</module>
+        <module>myrpc-common</module>
+        <module>myrpc-test</module>
+        <module>myrpc-test/myrpc-test-scanner</module>
+        <module>myrpc-provider</module>
+        <module>myrpc-provider/myrpc-provider-native</module>
+        <module>myrpc-test/myrpc-test-provider</module>
+        <module>myrpc-constants</module>
+        <module>myrpc-protocol</module>
+        <module>myrpc-codec</module>
+        <module>myrpc-serialization</module>
+        <module>myrpc-provider/myrpc-provider-common</module>
     </modules>
 
     <properties>
@@ -79,7 +91,6 @@
             <artifactId>commons-lang3</artifactId>
             <version>${commons.lang3.version}</version>
         </dependency>
-
 
         <!-- Objenesis -->
         <dependency>
