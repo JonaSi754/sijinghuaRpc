@@ -11,8 +11,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.apache.commons.lang3.StringUtils;
 import org.sijinghua.rpc.codec.RpcDecoder;
 import org.sijinghua.rpc.codec.RpcEncoder;
-import org.sijinghua.rpc.common.handler.RpcProviderHandler;
-import org.sijinghua.rpc.common.server.api.Server;
+import org.sijinghua.rpc.provider.common.handler.RpcProviderHandler;
+import org.sijinghua.rpc.provider.common.server.api.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,7 +1,7 @@
 package org.sijinghua.rpc.provider;
 
 import org.sijinghua.rpc.common.scanner.server.RpcServiceScanner;
-import org.sijinghua.rpc.common.server.base.BaseServer;
+import org.sijinghua.rpc.provider.common.server.base.BaseServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
