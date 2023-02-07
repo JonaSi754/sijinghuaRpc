@@ -35,7 +35,7 @@ public class ClassScanner {
      * 扫描指定包下的所有类信息
      * @param packageName 指定的包名
      * @return 指定包下所有完整类名的List集合
-     * @throws Exception
+     * @throws Exception exception
      */
     public static List<String> getClassNameList(String packageName) throws Exception {
         // 第一个class类的集合

@@ -13,6 +13,10 @@
     <file url="file://$PROJECT_DIR$/myrpc-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-constants/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-constants/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-protocol/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-protocol/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java" charset="UTF-8" />
@@ -27,8 +31,12 @@
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-codec/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-codec/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/java" charset="UTF-8" />

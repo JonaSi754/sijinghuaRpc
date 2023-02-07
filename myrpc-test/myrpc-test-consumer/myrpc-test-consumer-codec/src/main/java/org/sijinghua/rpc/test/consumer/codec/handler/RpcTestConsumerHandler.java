@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.sijinghua.rpc.protocol.RpcProtocol;
+import org.sijinghua.rpc.protocol.enumeration.RpcType;
 import org.sijinghua.rpc.protocol.header.RpcHeaderFactory;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
 import org.sijinghua.rpc.protocol.response.RpcResponse;
@@ -18,9 +19,9 @@ public class RpcTestConsumerHandler extends SimpleChannelInboundHandler<RpcProto
         logger.info("发送数据开始...");
         // 模拟发送数据
         RpcProtocol<RpcRequest> protocol = new RpcProtocol<>();
-        protocol.setHeader(RpcHeaderFactory.getRequestHeader("jdk", 1));
+        protocol.setHeader(RpcHeaderFactory.getRequestHeader("jdk", RpcType.REQUEST.getType()));
         RpcRequest request = new RpcRequest();
-        request.setClassName("org.sijinghua.rpc.test.DemoService");
+        request.setClassName("org.sijinghua.rpc.test.api.DemoService");
         request.setGroup("sijinghua");
         request.setMethodName("hello");
         request.setParameters(new Object[]{"sijinghua"});

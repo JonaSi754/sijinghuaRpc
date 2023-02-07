@@ -22,6 +22,7 @@
         <module>myrpc-codec</module>
         <module>myrpc-serialization</module>
         <module>myrpc-provider/myrpc-provider-common</module>
+        <module>myrpc-consumer</module>
     </modules>
 
     <properties>

@@ -5,8 +5,11 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import net.sf.cglib.reflect.FastClass;
+import net.sf.cglib.reflect.FastMethod;
 import org.sijinghua.rpc.common.helper.RpcServiceHelper;
 import org.sijinghua.rpc.common.threadpool.ServerThreadPool;
+import org.sijinghua.rpc.constants.RpcConstants;
 import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.enumeration.RpcStatus;
 import org.sijinghua.rpc.protocol.enumeration.RpcType;
@@ -22,9 +25,13 @@ import java.util.Map;
 public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<RpcRequest>> {
     private static final Logger logger = LoggerFactory.getLogger(RpcProviderHandler.class);
 
+    // 采用哪种类型调用真实方法
+    private final String reflectType;
+
     private final Map<String, Object> handlerMap;
 
-    public RpcProviderHandler(Map<String, Object> handlerMap) {
+    public RpcProviderHandler(String reflectType, Map<String, Object> handlerMap) {
+        this.reflectType = reflectType;
         this.handlerMap = handlerMap;
     }
 
@@ -64,6 +71,9 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
     private Object handle(RpcRequest request) throws Throwable {
         String serviceKey = RpcServiceHelper.buildServiceKey(request.getClassName(),
                 request.getVersion(), request.getGroup());
+        for (Map.Entry <String, Object> entry: handlerMap.entrySet()) {
+            logger.info("key: " + entry.getKey() + ", value: " + entry.getValue());
+        }
         Object serviceBean = handlerMap.get(serviceKey);
         if (serviceBean == null) {
             throw new RuntimeException(String.format("service not exist: %s:%s",
@@ -93,8 +103,31 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
 
     private Object invokeMethod(Object serviceBean, Class<?> serviceClass, String methodName,
                                 Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
+        switch (this.reflectType) {
+            case RpcConstants.REFLECT_TYPE_JDK:
+                return this.invokeJDKMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
+            case RpcConstants.REFLECT_TYPE_CGLIB:
+                return this.invokeCGLibMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
+            default:
+                throw new IllegalArgumentException("not support reflect type");
+        }
+    }
+
+    private Object invokeJDKMethod(Object serviceBean, Class<?> serviceClass, String methodName,
+                                   Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
+        // JDK reflect
+        logger.info("use jdk reflect type invoke method...");
         Method method = serviceClass.getMethod(methodName, parameterTypes);
         method.setAccessible(true);
         return method.invoke(serviceBean, parameters);
+    }
+
+    private Object invokeCGLibMethod(Object serviceBean, Class<?> serviceClass, String methodName,
+                                     Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
+        // CGLib reflect
+        logger.info("use cglib reflect type invoke method...");
+        FastClass serviceFastClass = FastClass.create(serviceClass);
+        FastMethod serviceFastMethod = serviceFastClass.getMethod(methodName, parameterTypes);
+        return serviceFastMethod.invoke(serviceBean, parameters);
     }
 }

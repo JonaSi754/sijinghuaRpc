@@ -19,7 +19,7 @@ public class RpcConstants {
     /**
      * REFLECT_TYPE_JDK
      */
-    public static final String REFLECT_TYPE = "jdk";
+    public static final String REFLECT_TYPE_JDK = "jdk";
 
     /**
      * REFLECT_TYPE_CGLIB
