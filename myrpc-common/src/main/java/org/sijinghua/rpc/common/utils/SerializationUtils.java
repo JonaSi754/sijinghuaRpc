@@ -2,6 +2,9 @@ package org.sijinghua.rpc.common.utils;
 
 import java.util.stream.IntStream;
 
+/**
+ * 序列化功能中的字符串补齐工具
+ */
 public class SerializationUtils {
     private static final String PADDING_STRING = "0";
 

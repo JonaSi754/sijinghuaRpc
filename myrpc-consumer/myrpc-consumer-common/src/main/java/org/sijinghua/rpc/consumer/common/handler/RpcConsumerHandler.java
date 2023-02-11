@@ -3,10 +3,12 @@ package org.sijinghua.rpc.consumer.common.handler;
 import com.alibaba.fastjson.JSONObject;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
+import org.sijinghua.rpc.consumer.common.context.RpcContext;
 import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.header.RpcHeader;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
 import org.sijinghua.rpc.protocol.response.RpcResponse;
+import org.sijinghua.rpc.proxy.api.future.RpcFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +24,7 @@ public class RpcConsumerHandler extends SimpleChannelInboundHandler<RpcProtocol<
     private SocketAddress remotePeer;
 
     // 存储请求ID和RpcResponse协议的映射关系，持续等待与之对应的键值对的出现
-    private Map<Long, RpcProtocol<RpcResponse>> pendingResponse = new ConcurrentHashMap<>();
+    private Map<Long, RpcFuture> pendingRPC = new ConcurrentHashMap<>();
 
     public Channel getChannel() {
         return channel;
@@ -52,24 +54,45 @@ public class RpcConsumerHandler extends SimpleChannelInboundHandler<RpcProtocol<
         logger.info("服务消费者接受到的数据 ===>>> {}", JSONObject.toJSONString(protocol));
         RpcHeader header = protocol.getHeader();
         long requestId = header.getRequestId();
-        pendingResponse.put(requestId, protocol);
+        RpcFuture rpcFuture = pendingRPC.remove(requestId);
+        if (rpcFuture != null) {
+            rpcFuture.done(protocol);
+        }
     }
 
     /**
-     * 服务消费者向服务提供者发送请求
+     * 服务消费者向服务提供者发送请求，异步转同步
      */
-    public Object sendRequest(RpcProtocol<RpcRequest> protocol) {
+    public RpcFuture sendRequest(RpcProtocol<RpcRequest> protocol, boolean async, boolean oneway) {
         logger.info("服务消费者发送的数据 ===>>> {}", JSONObject.toJSONString(protocol));
+        return oneway ? this.sendRequestOneway(protocol) : async ? sendRequestAsync(protocol) : sendRequestSync(protocol);
+    }
+
+    private RpcFuture sendRequestSync(RpcProtocol<RpcRequest> protocol) {
+        RpcFuture rpcFuture = this.getRpcFuture(protocol);
         channel.writeAndFlush(protocol);
+        return rpcFuture;
+    }
+
+    private RpcFuture sendRequestAsync(RpcProtocol<RpcRequest> protocol) {
+        RpcFuture rpcFuture = this.getRpcFuture(protocol);
+        // 异步调用，将RpcFuture放入RpcContext
+        RpcContext.getContext().setRPCFuture(rpcFuture);
+        channel.writeAndFlush(protocol);
+        return null;
+    }
+
+    private RpcFuture sendRequestOneway(RpcProtocol<RpcRequest> protocol) {
+        channel.writeAndFlush(protocol);
+        return null;
+    }
+
+    private RpcFuture getRpcFuture(RpcProtocol<RpcRequest> protocol) {
+        RpcFuture rpcFuture = new RpcFuture(protocol);
         RpcHeader header = protocol.getHeader();
         long requestId = header.getRequestId();
-        // 异步转同步
-        while (true) {
-            RpcProtocol<RpcResponse> responseRpcProtocol = pendingResponse.remove(requestId);
-            if (responseRpcProtocol != null) {
-                return responseRpcProtocol.getBody().getResult();
-            }
-        }
+        pendingRPC.put(requestId, rpcFuture);
+        return rpcFuture;
     }
 
     public void close() {

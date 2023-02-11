@@ -1,5 +1,8 @@
 package org.sijinghua.rpc.common.helper;
 
+/**
+ * Rpc的字符串拼接工具
+ */
 public class RpcServiceHelper {
     /**
      * 拼接字符串

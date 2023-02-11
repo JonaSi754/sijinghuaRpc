@@ -10,6 +10,7 @@ import org.sijinghua.rpc.consumer.common.handler.RpcConsumerHandler;
 import org.sijinghua.rpc.consumer.common.initializer.RpcConsumerInitializer;
 import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
+import org.sijinghua.rpc.proxy.api.future.RpcFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +52,7 @@ public class RpcConsumer {
         eventLoopGroup.shutdownGracefully();
     }
 
-    public Object sendRequest(RpcProtocol<RpcRequest> protocol) throws Exception {
+    public RpcFuture sendRequest(RpcProtocol<RpcRequest> protocol) throws Exception {
         // TODO 暂时写死，在引入注册中心后从注册中心获取
         String serviceAddress = "127.0.0.1";
         int port = 27880;
@@ -66,7 +67,9 @@ public class RpcConsumer {
             handler = getRpcConsumerHandler(serviceAddress, port);
             handlerMap.put(key, handler);
         }
-        return handler.sendRequest(protocol);
+
+        RpcRequest request = protocol.getBody();
+        return handler.sendRequest(protocol, request.getAsync(), request.getOneway());
     }
 
     /**

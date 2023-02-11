@@ -23,9 +23,11 @@
         <module>myrpc-serialization</module>
         <module>myrpc-provider/myrpc-provider-common</module>
         <module>myrpc-consumer</module>
+        <module>myrpc-proxy</module>
     </modules>
 
     <properties>
+        <project.build.directory>/Users/sijinghua/WorkSpace/code/Java/myrpc</project.build.directory>
         <string.version>5.2.20.RELEASE</string.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.21</slf4j.version>
@@ -136,6 +138,10 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <showDeprecation>true</showDeprecation>
+                    <compilerArgs>
+                        <d>${project.build.directory}/target</d>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
