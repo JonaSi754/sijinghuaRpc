@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb2e97e-2910-4e01-bdca-b4372f1780ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/async/IAsyncObjectProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/BaseProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/ProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/config/ProxyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/java/org/sijinghua/rpc/consumer/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/java/org/sijinghua/rpc/consumer/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/object/ObjectProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/object/ObjectProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/java/org/sijinghua/rpc/test/consumer/handler/RpcConsumerHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/java/org/sijinghua/rpc/test/consumer/handler/RpcConsumerHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/src/main/java/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/src/main/java/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java/org/sijinghua/rpc/proxy/jdk/JdkProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java/org/sijinghua/rpc/proxy/jdk/JdkProxyFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RpcConsumerNativeTest.testAsyncInterfaceRpc">
+  <component name="RunManager" selected="Application.RpcConsumerNativeTest">
     <configuration name="RpcConsumerHandlerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.handler.RpcConsumerHandlerTest" />
       <module name="myrpc-test-consumer-handler" />
@@ -146,9 +146,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RpcConsumerNativeTest.testAsyncInterfaceRpc" />
-        <item itemvalue="JUnit.RpcSingleServerTest.startRpcSingleServer" />
         <item itemvalue="Application.RpcConsumerNativeTest" />
+        <item itemvalue="JUnit.RpcSingleServerTest.startRpcSingleServer" />
+        <item itemvalue="JUnit.RpcConsumerNativeTest.testAsyncInterfaceRpc" />
         <item itemvalue="Application.RpcConsumerHandlerTest" />
         <item itemvalue="Application.RpcTestConsumer" />
       </list>
@@ -168,7 +168,7 @@
       <workItem from="1675409537564" duration="14767000" />
       <workItem from="1675485572646" duration="8843000" />
       <workItem from="1675512409739" duration="83033000" />
-      <workItem from="1676169642309" duration="6349000" />
+      <workItem from="1676169642309" duration="11112000" />
     </task>
     <servers />
   </component>
