@@ -1,7 +1,6 @@
 package org.sijinghua.rpc.test.consumer.handler;
 
 import org.sijinghua.rpc.consumer.common.RpcConsumer;
-import org.sijinghua.rpc.consumer.common.context.RpcContext;
 import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.enumeration.RpcType;
 import org.sijinghua.rpc.protocol.header.RpcHeaderFactory;

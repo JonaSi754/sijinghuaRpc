@@ -4,6 +4,7 @@ import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.enumeration.RpcType;
 import org.sijinghua.rpc.protocol.header.RpcHeaderFactory;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
+import org.sijinghua.rpc.proxy.api.async.IAsyncObjectProxy;
 import org.sijinghua.rpc.proxy.api.consumer.Consumer;
 import org.sijinghua.rpc.proxy.api.future.RpcFuture;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
-public class ObjectProxy <T> implements InvocationHandler {
+public class ObjectProxy <T> implements IAsyncObjectProxy, InvocationHandler {
     private static final Logger logger = LoggerFactory.getLogger(ObjectProxy.class);
 
     /**
@@ -73,7 +74,74 @@ public class ObjectProxy <T> implements InvocationHandler {
     }
 
     @Override
+    public RpcFuture call(String funcName, Object... args) {
+        RpcProtocol<RpcRequest> requestRpcProtocol = createRequest(this.clazz.getName(), funcName, args);
+        RpcFuture rpcFuture = null;
+        try {
+            rpcFuture = this.consumer.sendRequest(requestRpcProtocol);
+        } catch (Exception e) {
+            logger.error("async all throws exception: ", e);
+        }
+        return rpcFuture;
+    }
+
+    private RpcProtocol<RpcRequest> createRequest(String className, String methodName, Object[] args) {
+        RpcProtocol<RpcRequest> requestRpcProtocol = new RpcProtocol<>();
+
+        requestRpcProtocol.setHeader(RpcHeaderFactory.getRequestHeader(serializationType, RpcType.REQUEST.getType()));
+        RpcRequest request = new RpcRequest();
+        request.setClassName(className);
+        request.setMethodName(methodName);
+        request.setParameters(args);
+        request.setVersion(this.serviceVersion);
+        request.setGroup(this.serviceGroup);
+
+        Class[] parameterTypes = new Class[args.length];
+        // get right class type
+        for (int i = 0; i < args.length; ++i) {
+            parameterTypes[i] = getClassType(args[i]);
+        }
+        request.setParameterTypes(parameterTypes);
+        requestRpcProtocol.setBody(request);
+
+        logger.debug(className);
+        logger.debug(methodName);
+        for (int i = 0; i < parameterTypes.length; ++i) {
+            logger.debug(parameterTypes[i].getName());
+        }
+        for (int i = 0; i < args.length; ++i) {
+            logger.debug(args[i].toString());
+        }
+        return requestRpcProtocol;
+    }
+
+    private Class<?> getClassType(Object obj) {
+        Class<?> classType = obj.getClass();
+        String typeName = classType.getName();
+        switch (typeName) {
+            case "java.lang.Integer":
+                return Integer.TYPE;
+            case "java.lang.Long":
+                return Long.TYPE;
+            case "java.lang.Float":
+                return Float.TYPE;
+            case "java.lang.Double":
+                return Double.TYPE;
+            case "java.lang.Character":
+                return Character.TYPE;
+            case "java.lang.Boolean":
+                return Boolean.TYPE;
+            case "java.lang.Short":
+                return Short.TYPE;
+            case "java.lang.Byte":
+                return Byte.TYPE;
+        }
+        return classType;
+    }
+
+    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        // 如果反射调用的方法在本地对象里已经存在
         if (Object.class == method.getDeclaringClass()) {
             String name = method.getName();
             switch (name) {
