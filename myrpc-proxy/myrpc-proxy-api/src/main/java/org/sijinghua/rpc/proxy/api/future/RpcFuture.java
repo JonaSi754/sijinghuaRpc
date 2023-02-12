@@ -58,7 +58,7 @@ public class RpcFuture extends CompletableFuture<Object> {
 
     @Override
     public Object get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {
-        boolean success = sync.tryAcquireNanos(-1, timeout);
+        boolean success = sync.tryAcquireNanos(-1, unit.toNanos(timeout));
         if (success) {
             if (this.responseRpcProtocol != null) {
                 return this.responseRpcProtocol.getBody().getResult();

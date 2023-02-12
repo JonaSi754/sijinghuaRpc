@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>myrpc-consumer-common</module>
+        <module>myrpc-consumer-native</module>
     </modules>
 
     <properties>

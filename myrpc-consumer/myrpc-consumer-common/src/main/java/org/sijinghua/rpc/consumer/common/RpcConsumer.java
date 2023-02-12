@@ -11,6 +11,7 @@ import org.sijinghua.rpc.consumer.common.handler.RpcConsumerHandler;
 import org.sijinghua.rpc.consumer.common.initializer.RpcConsumerInitializer;
 import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
+import org.sijinghua.rpc.proxy.api.consumer.Consumer;
 import org.sijinghua.rpc.proxy.api.future.RpcFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class RpcConsumer {
+public class RpcConsumer implements Consumer {
     private static final Logger logger = LoggerFactory.getLogger(RpcConsumer.class);
 
     private final Bootstrap bootstrap;

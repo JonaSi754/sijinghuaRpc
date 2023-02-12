@@ -1,6 +1,5 @@
 package org.sijinghua.rpc.provider.common.handler;
 
-import com.alibaba.fastjson.JSONObject;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
