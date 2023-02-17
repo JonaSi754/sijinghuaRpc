@@ -7,6 +7,7 @@ import org.sijinghua.rpc.protocol.request.RpcRequest;
 import org.sijinghua.rpc.proxy.api.async.IAsyncObjectProxy;
 import org.sijinghua.rpc.proxy.api.consumer.Consumer;
 import org.sijinghua.rpc.proxy.api.future.RpcFuture;
+import org.sijinghua.rpc.registry.api.RegistryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,18 +58,25 @@ public class ObjectProxy <T> implements IAsyncObjectProxy, InvocationHandler {
      */
     private boolean oneway;
 
+    /**
+     * 服务注册与发现接口
+     */
+    private RegistryService registryService;
+
     public ObjectProxy(Class<T> clazz) {
         this.clazz = clazz;
     }
 
-    public ObjectProxy(Class<T> clazz, String serviceVersion, String serviceGroup, String serializationType,
-                       long timeout, Consumer consumer, boolean async, boolean oneway) {
+    public ObjectProxy(Class<T> clazz, String serviceVersion, String serviceGroup, long timeout,
+                       RegistryService registryService, Consumer consumer, String serializationType,
+                       boolean async, boolean oneway) {
         this.clazz = clazz;
         this.serviceVersion = serviceVersion;
         this.serviceGroup = serviceGroup;
-        this.serializationType = serializationType;
         this.timeout = timeout;
+        this.registryService = registryService;
         this.consumer = consumer;
+        this.serializationType = serializationType;
         this.async = async;
         this.oneway = oneway;
     }
@@ -78,7 +86,7 @@ public class ObjectProxy <T> implements IAsyncObjectProxy, InvocationHandler {
         RpcProtocol<RpcRequest> requestRpcProtocol = createRequest(this.clazz.getName(), funcName, args);
         RpcFuture rpcFuture = null;
         try {
-            rpcFuture = this.consumer.sendRequest(requestRpcProtocol);
+            rpcFuture = this.consumer.sendRequest(requestRpcProtocol, registryService);
         } catch (Exception e) {
             logger.error("async all throws exception: ", e);
         }
@@ -184,7 +192,7 @@ public class ObjectProxy <T> implements IAsyncObjectProxy, InvocationHandler {
             }
         }
 
-        RpcFuture rpcFuture = this.consumer.sendRequest(requestRpcProtocol);
+        RpcFuture rpcFuture = this.consumer.sendRequest(requestRpcProtocol, registryService);
         return rpcFuture == null ? null : timeout > 0 ? rpcFuture.get(timeout, TimeUnit.MILLISECONDS) : rpcFuture.get();
     }
 }

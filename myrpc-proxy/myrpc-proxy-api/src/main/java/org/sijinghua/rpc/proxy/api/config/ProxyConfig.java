@@ -1,6 +1,7 @@
 package org.sijinghua.rpc.proxy.api.config;
 
 import org.sijinghua.rpc.proxy.api.consumer.Consumer;
+import org.sijinghua.rpc.registry.api.RegistryService;
 
 import java.io.Serializable;
 
@@ -28,6 +29,11 @@ public class ProxyConfig<T> implements Serializable {
     private long timeout;
 
     /**
+     * 服务注册与发现接口
+     */
+    private RegistryService registryService;
+
+    /**
      * 消费者接口
      */
     private Consumer consumer;
@@ -47,12 +53,13 @@ public class ProxyConfig<T> implements Serializable {
      */
     private boolean oneway;
 
-    public ProxyConfig(Class<T> clazz, String serviceVersion, String serviceGroup, long timeout, Consumer consumer,
-                       String serializationType, boolean async, boolean oneway) {
+    public ProxyConfig(Class<T> clazz, String serviceVersion, String serviceGroup, long timeout, RegistryService registryService,
+                       Consumer consumer, String serializationType, boolean async, boolean oneway) {
         this.clazz = clazz;
         this.serviceVersion = serviceVersion;
         this.serviceGroup = serviceGroup;
         this.timeout = timeout;
+        this.registryService = registryService;
         this.consumer = consumer;
         this.serializationType = serializationType;
         this.async = async;
@@ -89,6 +96,14 @@ public class ProxyConfig<T> implements Serializable {
 
     public void setTimeout(long timeout) {
         this.timeout = timeout;
+    }
+
+    public RegistryService getRegistryService() {
+        return registryService;
+    }
+
+    public void setRegistryService(RegistryService registryService) {
+        this.registryService = registryService;
     }
 
     public Consumer getConsumer() {

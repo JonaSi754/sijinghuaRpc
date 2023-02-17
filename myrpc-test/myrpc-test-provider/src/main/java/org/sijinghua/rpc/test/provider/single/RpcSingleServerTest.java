@@ -6,8 +6,8 @@ import org.sijinghua.rpc.provider.RpcSingleServer;
 public class RpcSingleServerTest {
     @Test
     public void startRpcSingleServer() {
-        RpcSingleServer singleServer = new RpcSingleServer("127.0.0.1:27880",
-                "org.sijinghua.rpc.test", "jdk");
+        RpcSingleServer singleServer = new RpcSingleServer("127.0.0.1:27880", "127.0.0.1:2181",
+                "zookeeper", "org.sijinghua.rpc.test", "jdk");
         singleServer.startNettyServer();
     }
 }

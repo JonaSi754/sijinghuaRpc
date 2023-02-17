@@ -5,12 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb2e97e-2910-4e01-bdca-b4372f1780ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/BaseProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/ProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/config/ProxyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-common/src/main/java/org/sijinghua/rpc/common/exception/RegistryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/src/main/java/org/sijinghua/rpc/consumer/common/helper/RpcConsumerHandlerHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-protocol/src/main/java/org/sijinghua/rpc/protocol/meta/ServiceMeta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/src/main/java/org/sijinghua/rpc/registry/api/RegistryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/src/main/java/org/sijinghua/rpc/registry/api/config/RegistryConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/src/main/java/org/sijinghua/rpc/registry/zookeeper/ZookeeperRegistryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-registry/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-registry/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-registry/src/main/java/org/sijinghua/rpc/test/registry/ZookeeperRegistryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-common/src/main/java/org/sijinghua/rpc/common/scanner/server/RpcServiceScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java/org/sijinghua/rpc/provider/common/scanner/RpcServiceScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/src/main/java/org/sijinghua/rpc/consumer/common/RpcConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/src/main/java/org/sijinghua/rpc/consumer/common/RpcConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/java/org/sijinghua/rpc/consumer/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/java/org/sijinghua/rpc/consumer/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java/org/sijinghua/rpc/proxy/jdk/JdkProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java/org/sijinghua/rpc/proxy/jdk/JdkProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java/org/sijinghua/rpc/provider/common/server/base/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java/org/sijinghua/rpc/provider/common/server/base/BaseServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-native/src/main/java/org/sijinghua/rpc/provider/RpcSingleServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-native/src/main/java/org/sijinghua/rpc/provider/RpcSingleServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/BaseProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/BaseProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/config/ProxyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/config/ProxyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/consumer/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/object/ObjectProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/object/ObjectProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/src/main/java/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/src/main/java/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/java/org/sijinghua/rpc/test/provider/single/RpcSingleServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/java/org/sijinghua/rpc/test/provider/single/RpcSingleServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,47 +94,11 @@
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.sijinghua.rpc.registry.api" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.RpcConsumerNativeTest">
-    <configuration name="RpcConsumerHandlerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.handler.RpcConsumerHandlerTest" />
-      <module name="myrpc-test-consumer-handler" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sijinghua.rpc.test.consumer.handler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RpcConsumerNativeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.RpcConsumerNativeTest" />
-      <module name="myrpc-test-consumer-native" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sijinghua.rpc.test.consumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RpcTestConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.codec.RpcTestConsumer" />
-      <module name="myrpc-test-consumer-codec" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sijinghua.rpc.test.consumer.codec.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.RpcConsumerNativeTest.testInterfaceRpc">
     <configuration name="RpcConsumerNativeTest.testAsyncInterfaceRpc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myrpc-test-consumer-native" />
       <extension name="coverage">
@@ -123,6 +110,22 @@
       <option name="PACKAGE_NAME" value="org.sijinghua.rpc.test.consumer" />
       <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.RpcConsumerNativeTest" />
       <option name="METHOD_NAME" value="testAsyncInterfaceRpc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcConsumerNativeTest.testInterfaceRpc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myrpc-test-consumer-native" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sijinghua.rpc.test.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.sijinghua.rpc.test.consumer" />
+      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.RpcConsumerNativeTest" />
+      <option name="METHOD_NAME" value="testInterfaceRpc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,13 +147,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZookeeperRegistryTest.testDestroy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myrpc-test-registry" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sijinghua.rpc.test.registry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.sijinghua.rpc.test.registry" />
+      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.registry.ZookeeperRegistryTest" />
+      <option name="METHOD_NAME" value="testDestroy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZookeeperRegistryTest.testRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myrpc-test-registry" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sijinghua.rpc.test.registry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.sijinghua.rpc.test.registry" />
+      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.registry.ZookeeperRegistryTest" />
+      <option name="METHOD_NAME" value="testRegister" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RpcConsumerNativeTest" />
+        <item itemvalue="JUnit.RpcConsumerNativeTest.testInterfaceRpc" />
         <item itemvalue="JUnit.RpcSingleServerTest.startRpcSingleServer" />
         <item itemvalue="JUnit.RpcConsumerNativeTest.testAsyncInterfaceRpc" />
-        <item itemvalue="Application.RpcConsumerHandlerTest" />
-        <item itemvalue="Application.RpcTestConsumer" />
+        <item itemvalue="JUnit.ZookeeperRegistryTest.testRegister" />
+        <item itemvalue="JUnit.ZookeeperRegistryTest.testDestroy" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +203,7 @@
       <workItem from="1675409537564" duration="14767000" />
       <workItem from="1675485572646" duration="8843000" />
       <workItem from="1675512409739" duration="83033000" />
-      <workItem from="1676169642309" duration="11112000" />
+      <workItem from="1676169642309" duration="41841000" />
     </task>
     <servers />
   </component>

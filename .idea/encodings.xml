@@ -33,6 +33,12 @@
     <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-registry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/java" charset="UTF-8" />
@@ -51,6 +57,8 @@
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-registry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-scanner/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-scanner/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/src/main/java" charset="UTF-8" />

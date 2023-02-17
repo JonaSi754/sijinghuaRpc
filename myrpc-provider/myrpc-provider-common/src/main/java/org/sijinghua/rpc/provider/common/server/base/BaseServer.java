@@ -13,6 +13,9 @@ import org.sijinghua.rpc.codec.RpcDecoder;
 import org.sijinghua.rpc.codec.RpcEncoder;
 import org.sijinghua.rpc.provider.common.handler.RpcProviderHandler;
 import org.sijinghua.rpc.provider.common.server.api.Server;
+import org.sijinghua.rpc.registry.api.RegistryService;
+import org.sijinghua.rpc.registry.api.config.RegistryConfig;
+import org.sijinghua.rpc.registry.zookeeper.ZookeeperRegistryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,15 +37,34 @@ public class BaseServer implements Server {
     // 存储的是实体类关系
     protected Map<String, Object> handlerMap = new HashMap<>();
 
-    public BaseServer(String serverAddress, String reflectType) {
+    // 服务注册实例
+    protected RegistryService registryService;
+
+    public BaseServer(String serverAddress, String registryAddress, String registryType, String reflectType) {
         if (!StringUtils.isEmpty(serverAddress)) {
             String[] serverArray = serverAddress.split(":");
             this.host = serverArray[0];
             this.port = Integer.parseInt(serverArray[1]);
         }
+        this.registryService = getRegistryService(registryAddress, registryType);
         this.reflectType = reflectType;
     }
 
+    private RegistryService getRegistryService(String registryAddress, String registryType) {
+        // TODO 后续扩展支持SPI
+        RegistryService registryService = null;
+        try {
+            registryService = new ZookeeperRegistryService();
+            registryService.init(new RegistryConfig(registryAddress, registryType));
+        } catch (Exception e) {
+            logger.error("RPC server init error", e);
+        }
+        return registryService;
+    }
+
+    /**
+     * 启动服务端Netty服务器
+     */
     @Override
     public void startNettyServer() {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
