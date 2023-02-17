@@ -8,6 +8,8 @@ import org.apache.curator.x.discovery.ServiceDiscoveryBuilder;
 import org.apache.curator.x.discovery.ServiceInstance;
 import org.apache.curator.x.discovery.details.JsonInstanceSerializer;
 import org.sijinghua.rpc.common.helper.RpcServiceHelper;
+import org.sijinghua.rpc.loadbalancer.api.ServiceLoadBalancer;
+import org.sijinghua.rpc.loadbalancer.random.RandomServiceLoadBalancer;
 import org.sijinghua.rpc.protocol.meta.ServiceMeta;
 import org.sijinghua.rpc.registry.api.RegistryService;
 import org.sijinghua.rpc.registry.api.config.RegistryConfig;
@@ -39,6 +41,11 @@ public class ZookeeperRegistryService implements RegistryService {
     private ServiceDiscovery<ServiceMeta> serviceDiscovery;
 
     /**
+     * 负载均衡接口
+     */
+    private ServiceLoadBalancer<ServiceInstance<ServiceMeta>> serviceLoadBalancer;
+
+    /**
      * 构建CuratorFramework客户端，并初始化serviceDiscovery
      * @param registryConfig 服务注册的基本信息
      * @throws Exception 抛出异常
@@ -56,6 +63,7 @@ public class ZookeeperRegistryService implements RegistryService {
                 .basePath(ZK_BASE_PATH)
                 .build();
         this.serviceDiscovery.start();
+        this.serviceLoadBalancer = new RandomServiceLoadBalancer<>();
     }
 
     @Override
@@ -93,20 +101,12 @@ public class ZookeeperRegistryService implements RegistryService {
     @Override
     public ServiceMeta discovery(String serviceName, int invokerHashcode) throws Exception {
         Collection<ServiceInstance<ServiceMeta>> serviceInstances = serviceDiscovery.queryForInstances(serviceName);
-        ServiceInstance<ServiceMeta> instance = this.selectOneServiceInstance((List<ServiceInstance<ServiceMeta>>) serviceInstances);
+        ServiceInstance<ServiceMeta> instance = serviceLoadBalancer.select(
+                (List<ServiceInstance<ServiceMeta>>) serviceInstances, invokerHashcode);
         if (instance != null) {
             return instance.getPayload();
         }
         return null;
-    }
-
-    private ServiceInstance<ServiceMeta> selectOneServiceInstance(List<ServiceInstance<ServiceMeta>> serviceInstances) {
-        if (serviceInstances == null || serviceInstances.isEmpty()) {
-            return null;
-        }
-        Random random = new Random();
-        int index = random.nextInt(serviceInstances.size());
-        return serviceInstances.get(index);
     }
 
     @Override

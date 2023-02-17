@@ -19,6 +19,12 @@
     <file url="file://$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-random/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-random/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-loadbalancer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-loadbalancer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-protocol/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-protocol/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java" charset="UTF-8" />

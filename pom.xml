@@ -28,6 +28,9 @@
         <module>myrpc-registry/myrpc-registry-api</module>
         <module>myrpc-registry/myrpc-registry-zookeeper</module>
         <module>myrpc-test/myrpc-test-registry</module>
+        <module>myrpc-loadbalancer</module>
+        <module>myrpc-loadbalancer/myrpc-loadbalancer-api</module>
+        <module>myrpc-loadbalancer/myrpc-loadbalancer-random</module>
     </modules>
 
     <properties>
