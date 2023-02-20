@@ -32,7 +32,7 @@
     </dependencies>
 
     <build>
-        <outputDirectory>${project.build.mydirectory}</outputDirectory>
+        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
     </build>
 
 </project>

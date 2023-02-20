@@ -26,7 +26,7 @@ public class RpcConsumerNativeTest {
     @Before
     public void initRpcClient() {
         rpcClient = new RpcClient("127.0.0.1:2181", "zookeeper", "1.0.0",
-                "sijinghua", "jdk", 3000, false, false);
+                "sijinghua", "protostuff", 3000, false, false);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class RpcConsumerNativeTest {
         RpcClient rpcClient = new RpcClient("127.0.0.1:2181", "zookeeper", "1.0.0",
                 "sijinghua", "jdk", 3000, false, false);
         IAsyncObjectProxy demoService = rpcClient.createAsync(DemoService.class);
-        RpcFuture future = demoService.call("hello", "Jonathan");
+        RpcFuture future = demoService.call("hello", "meat");
         logger.info("返回的结果数据 ===>>> " + future.get());
         rpcClient.shutdown();
     }

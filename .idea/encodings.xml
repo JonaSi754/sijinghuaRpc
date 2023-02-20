@@ -47,10 +47,22 @@
     <file url="file://$PROJECT_DIR$/myrpc-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-serialization/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-spi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-spi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-codec/src/main/java" charset="UTF-8" />
@@ -67,6 +79,8 @@
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-scanner/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-scanner/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-test/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-test/rpc-test-scanner/src/main/java" charset="UTF-8" />

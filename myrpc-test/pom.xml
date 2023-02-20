@@ -14,6 +14,7 @@
     <modules>
         <module>myrpc-test-consumer</module>
         <module>myrpc-test-api</module>
+        <module>myrpc-test-spi</module>
     </modules>
 
     <properties>
@@ -29,5 +30,9 @@
             <version>4.12</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
+    </build>
 
 </project>

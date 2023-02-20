@@ -1,5 +1,9 @@
 package org.sijinghua.rpc.serialization.api;
 
+import org.sijinghua.rpc.constants.RpcConstants;
+import org.sijinghua.rpc.spi.annotation.SPI;
+
+@SPI(RpcConstants.SERIALIZATION_JDK)
 public interface Serialization {
     /**
      * 序列化

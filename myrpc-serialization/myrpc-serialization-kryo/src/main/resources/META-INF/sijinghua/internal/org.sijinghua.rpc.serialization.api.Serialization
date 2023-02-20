@@ -1,0 +1,1 @@
+kryo=org.sijinghua.rpc.serialization.kryo.KryoSerialization

@@ -14,6 +14,11 @@
     <modules>
         <module>myrpc-serialization-api</module>
         <module>myrpc-serialization-jdk</module>
+        <module>myrpc-serialization-json</module>
+        <module>myrpc-serialization-hessian2</module>
+        <module>myrpc-serialization-fst</module>
+        <module>myrpc-serialization-kryo</module>
+        <module>myrpc-serialization-protostuff</module>
     </modules>
 
     <properties>
@@ -21,5 +26,9 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <build>
+        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
+    </build>
 
 </project>

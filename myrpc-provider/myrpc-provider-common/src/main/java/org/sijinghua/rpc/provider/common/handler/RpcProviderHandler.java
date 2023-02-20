@@ -115,7 +115,7 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
     private Object invokeJDKMethod(Object serviceBean, Class<?> serviceClass, String methodName,
                                    Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
         // JDK reflect
-        logger.info("use jdk reflect type invoke method...");
+        logger.info("use jdk reflect proxy type invoke method...");
         Method method = serviceClass.getMethod(methodName, parameterTypes);
         method.setAccessible(true);
         return method.invoke(serviceBean, parameters);
@@ -124,7 +124,7 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
     private Object invokeCGLibMethod(Object serviceBean, Class<?> serviceClass, String methodName,
                                      Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
         // CGLib reflect
-        logger.info("use cglib reflect type invoke method...");
+        logger.info("use cglib proxy type invoke method...");
         FastClass serviceFastClass = FastClass.create(serviceClass);
         FastMethod serviceFastMethod = serviceFastClass.getMethod(methodName, parameterTypes);
         return serviceFastMethod.invoke(serviceBean, parameters);
