@@ -4,18 +4,42 @@ import org.sijinghua.rpc.consumer.common.RpcConsumer;
 import org.sijinghua.rpc.protocol.RpcProtocol;
 import org.sijinghua.rpc.protocol.enumeration.RpcType;
 import org.sijinghua.rpc.protocol.header.RpcHeaderFactory;
+import org.sijinghua.rpc.protocol.meta.ServiceMeta;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
 import org.sijinghua.rpc.proxy.api.callback.AsyncRpcCallback;
 import org.sijinghua.rpc.proxy.api.future.RpcFuture;
+import org.sijinghua.rpc.registry.api.RegistryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 public class RpcConsumerHandlerTest {
     private static final Logger logger = LoggerFactory.getLogger(RpcConsumer.class);
 
     public static void main(String[] args) throws Exception {
         RpcConsumer consumer = RpcConsumer.getInstance();
-        RpcFuture future = consumer.sendRequest(getRpcRequestProtocol());
+        RpcFuture future = consumer.sendRequest(getRpcRequestProtocol(), new RegistryService() {
+            @Override
+            public void register(ServiceMeta serviceMeta) throws Exception {
+
+            }
+
+            @Override
+            public void unRegister(ServiceMeta serviceMeta) throws Exception {
+
+            }
+
+            @Override
+            public ServiceMeta discovery(String serviceName, int invokerHashcode) throws Exception {
+                return null;
+            }
+
+            @Override
+            public void destroy() throws IOException {
+
+            }
+        });
         future.addCallBack(new AsyncRpcCallback() {
             @Override
             public void onSuccess(Object result) {

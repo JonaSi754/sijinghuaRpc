@@ -35,6 +35,14 @@
     <file url="file://$PROJECT_DIR$/myrpc-provider/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-bytebuddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-bytebuddy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-cglib/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-cglib/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-javassist/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-javassist/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/src/main/java" charset="UTF-8" />

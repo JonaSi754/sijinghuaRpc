@@ -14,6 +14,10 @@
     <modules>
         <module>myrpc-proxy-api</module>
         <module>myrpc-proxy-jdk</module>
+        <module>myrpc-proxy-cglib</module>
+        <module>myrpc-proxy-javassist</module>
+        <module>myrpc-proxy-bytebuddy</module>
+        <module>myrpc-proxy-asm</module>
     </modules>
 
     <properties>
@@ -21,9 +25,5 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <build>
-        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
-    </build>
 
 </project>

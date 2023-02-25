@@ -27,8 +27,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <outputDirectory>${project.build.myDirectory}/target</outputDirectory>
-    </build>
-
 </project>

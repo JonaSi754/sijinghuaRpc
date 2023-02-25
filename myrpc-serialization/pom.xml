@@ -27,8 +27,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <build>
-        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
-    </build>
-
 </project>

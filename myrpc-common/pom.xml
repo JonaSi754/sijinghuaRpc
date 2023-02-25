@@ -18,17 +18,11 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.sijinghua.rpc</groupId>
             <artifactId>myrpc-annotation</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
-
-    <build>
-        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
-    </build>
 
 </project>

@@ -30,8 +30,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <outputDirectory>${project.build.mydirectory}</outputDirectory>
-    </build>
-
 </project>

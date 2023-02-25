@@ -5,59 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb2e97e-2910-4e01-bdca-b4372f1780ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/src/main/java/org/sijinghua/rpc/serialization/fst/FstSerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/src/main/java/org/sijinghua/rpc/serialization/hessian2/Hessian2Serialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/src/main/java/org/sijinghua/rpc/serialization/json/JsonSerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/src/main/java/org/sijinghua/rpc/serialization/kryo/KryoSerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/src/main/java/org/sijinghua/rpc/serialization/protostuff/ProtostuffSerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-spi/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-spi/src/main/java/org/sijinghua/rpc/spi/annotation/SPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-spi/src/main/java/org/sijinghua/rpc/spi/annotation/SPIClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-spi/src/main/java/org/sijinghua/rpc/spi/factory/ExtensionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-spi/src/main/java/org/sijinghua/rpc/spi/factory/SpiExtensionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-spi/src/main/java/org/sijinghua/rpc/spi/loader/ExtensionLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/java/org/sijinghua/rpc/test/spi/SpiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/java/org/sijinghua/rpc/test/spi/service/SpiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/java/org/sijinghua/rpc/test/spi/service/impl/SpiServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/resources/META-INF/sijinghua/external/org.sijinghua.rpc.test.spi.service.SpiService" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/java/org/sijinghua/rpc/proxy/asm/AsmProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/java/org/sijinghua/rpc/proxy/asm/classloader/ASMClassLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/java/org/sijinghua/rpc/proxy/asm/factory/ASMGenerateProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/java/org/sijinghua/rpc/proxy/asm/proxy/ASMProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-asm/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.proxy.api.ProxyFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-bytebuddy/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-bytebuddy/src/main/java/org/sijinghua/rpc/proxy/bytebuddy/ByteBuddyProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-bytebuddy/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.proxy.api.ProxyFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-cglib/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-cglib/src/main/java/org/sijinghua/rpc/proxy/cglib/CglibProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-cglib/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.proxy.api.ProxyFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-javassist/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-javassist/src/main/java/org/sijinghua/rpc/proxy/javassist/JavassistProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-javassist/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.proxy.api.ProxyFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/resources/META-INF/sijinghua/internal/org.sijinghua.rpc.proxy.api.ProxyFactory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/sijinghua/external/org.sijinghua.rpc.test.spi.service.SpiService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/sijinghua/internal/org.sijinghua.rpc.serialization.api.Serialization" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-annotation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-annotation/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-codec/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-codec/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-codec/src/main/java/org/sijinghua/rpc/codec/RpcCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-codec/src/main/java/org/sijinghua/rpc/codec/RpcCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-codec/src/main/java/org/sijinghua/rpc/codec/RpcDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-codec/src/main/java/org/sijinghua/rpc/codec/RpcDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-codec/src/main/java/org/sijinghua/rpc/codec/RpcEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-codec/src/main/java/org/sijinghua/rpc/codec/RpcEncoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-constants/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-constants/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/java/org/sijinghua/rpc/consumer/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-native/src/main/java/org/sijinghua/rpc/consumer/RpcClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-random/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-loadbalancer/myrpc-loadbalancer-random/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-loadbalancer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-loadbalancer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-protocol/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-protocol/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java/org/sijinghua/rpc/provider/common/handler/RpcProviderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/src/main/java/org/sijinghua/rpc/provider/common/handler/RpcProviderHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-native/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/myrpc-provider-native/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-api/src/main/java/org/sijinghua/rpc/proxy/api/ProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java/org/sijinghua/rpc/proxy/jdk/JdkProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/java/org/sijinghua/rpc/proxy/jdk/JdkProxyFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-proxy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-proxy/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-registry/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/src/main/java/org/sijinghua/rpc/serialization/api/Serialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-api/src/main/java/org/sijinghua/rpc/serialization/api/Serialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-fst/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-hessian2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/java/org/sijinghua/rpc/serialization/jdk/JdkSerialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-jdk/src/main/java/org/sijinghua/rpc/serialization/jdk/JdkSerialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-json/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-kryo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/myrpc-serialization-protostuff/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-serialization/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-serialization/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-spi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-spi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-codec/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-codec/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/java/org/sijinghua/rpc/test/consumer/handler/RpcConsumerHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/java/org/sijinghua/rpc/test/consumer/handler/RpcConsumerHandlerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/src/main/java/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-native/src/main/java/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/java/org/sijinghua/rpc/test/provider/single/RpcSingleServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-provider/src/main/java/org/sijinghua/rpc/test/provider/single/RpcSingleServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-registry/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-scanner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-scanner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myrpc-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myrpc-test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/test/consumer/RpcConsumerNativeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/serialization/fst/FstSerialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/serialization/hessian2/Hessian2Serialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/serialization/json/JsonSerialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/serialization/kryo/KryoSerialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/serialization/protostuff/ProtostuffSerialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/test/spi/SpiTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/test/spi/service/SpiService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sijinghua/rpc/test/spi/service/impl/SpiServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,52 +100,78 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2L8oQshoyY1QiTMhIcE3wsVjbx7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "last_opened_file_path": "/Users/sijinghua/WorkSpace/code/Java/myrpc/myrpc-common/src/main/resources",
+    "last_opened_file_path": "/Users/sijinghua/WorkSpace/code/Java/sijinghuaRpc/myrpc-proxy/myrpc-proxy-jdk/src/main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2544803",
-    "spring.configuration.checksum": "f64158628cca70726acf8d4b864fecaf"
+    "settings.editor.selected.configurable": "preferences.sourceCode.XML",
+    "spring.configuration.checksum": "c02c1b4873ef23a07f13f8d5e880eef7",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main" />
       <recent name="$PROJECT_DIR$/myrpc-common/src/main/resources" />
       <recent name="$PROJECT_DIR$/myrpc-consumer/myrpc-consumer-common/src/main/resources" />
       <recent name="$PROJECT_DIR$/myrpc-test/myrpc-test-consumer/myrpc-test-consumer-handler/src/main/resources" />
       <recent name="$PROJECT_DIR$/myrpc-test/myrpc-test-api/src/main/resources" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/META-INF/sijinghua/internal" />
       <recent name="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/resources/META-INF/sijinghua/external" />
       <recent name="$PROJECT_DIR$/myrpc-test/myrpc-test-spi/src/main/resources/META-INF.sijinghua.external" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.sijinghua.rpc.proxy.asm" />
       <recent name="org.sijinghua.rpc.test.spi" />
       <recent name="org.sijinghua.rpc.registry.api" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.RpcConsumerNativeTest.testInterfaceRpc">
+    <configuration name="RpcConsumerNativeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.consumer.RpcConsumerNativeTest" />
+      <module name="myrpc-test-consumer-native" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sijinghua.rpc.test.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RpcConsumerNativeTest.testAsyncInterfaceRpc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myrpc-test-consumer-native" />
       <extension name="coverage">
@@ -190,29 +236,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZookeeperRegistryTest.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="myrpc-test-registry" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sijinghua.rpc.test.registry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.sijinghua.rpc.test.registry" />
-      <option name="MAIN_CLASS_NAME" value="org.sijinghua.rpc.test.registry.ZookeeperRegistryTest" />
-      <option name="METHOD_NAME" value="testString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RpcConsumerNativeTest.testInterfaceRpc" />
         <item itemvalue="JUnit.RpcSingleServerTest.startRpcSingleServer" />
         <item itemvalue="JUnit.RpcConsumerNativeTest.testAsyncInterfaceRpc" />
+        <item itemvalue="Application.RpcConsumerNativeTest" />
         <item itemvalue="JUnit.SpiTest.testSpiLoader" />
-        <item itemvalue="JUnit.ZookeeperRegistryTest.testString" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +261,11 @@
       <workItem from="1675485572646" duration="8843000" />
       <workItem from="1675512409739" duration="83033000" />
       <workItem from="1676169642309" duration="90674000" />
+      <workItem from="1677162243234" duration="1689000" />
+      <workItem from="1677165810201" duration="708000" />
+      <workItem from="1677166593192" duration="4000" />
+      <workItem from="1677166900375" duration="1924000" />
+      <workItem from="1677170634392" duration="19836000" />
     </task>
     <servers />
   </component>
@@ -247,5 +282,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

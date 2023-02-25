@@ -1,0 +1,1 @@
+cglib=org.sijinghua.rpc.proxy.cglib.CglibProxyFactory

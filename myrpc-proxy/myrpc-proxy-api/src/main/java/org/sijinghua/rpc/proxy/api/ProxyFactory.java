@@ -1,7 +1,9 @@
 package org.sijinghua.rpc.proxy.api;
 
 import org.sijinghua.rpc.proxy.api.config.ProxyConfig;
+import org.sijinghua.rpc.spi.annotation.SPI;
 
+@SPI
 public interface ProxyFactory {
     /**
      * 获取代理对象

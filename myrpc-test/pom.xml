@@ -31,8 +31,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <outputDirectory>${project.build.mydirectory}/target</outputDirectory>
-    </build>
-
 </project>
