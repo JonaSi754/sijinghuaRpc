@@ -47,6 +47,20 @@
     <file url="file://$PROJECT_DIR$/myrpc-proxy/myrpc-proxy-jdk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-proxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-asm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-asm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-bytebuddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-bytebuddy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-cglib/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-cglib/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-javassist/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-javassist/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-jdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/myrpc-reflect-jdk/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myrpc-reflect/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myrpc-registry/myrpc-registry-zookeeper/src/main/java" charset="UTF-8" />

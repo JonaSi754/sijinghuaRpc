@@ -32,6 +32,7 @@
         <module>myrpc-loadbalancer/myrpc-loadbalancer-api</module>
         <module>myrpc-loadbalancer/myrpc-loadbalancer-random</module>
         <module>myrpc-spi</module>
+        <module>myrpc-reflect</module>
     </modules>
 
     <properties>

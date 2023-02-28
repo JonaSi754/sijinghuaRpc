@@ -20,34 +20,68 @@
     </properties>
 
     <dependencies>
+        <!-- Protocol & Serialization -->
         <dependency>
             <groupId>org.sijinghua.rpc</groupId>
             <artifactId>myrpc-protocol</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.sijinghua.rpc</groupId>
             <artifactId>myrpc-codec</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- SPI -->
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-spi</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Reflect -->
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-reflect-jdk</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-reflect-cglib</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-reflect-javassist</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-reflect-bytebuddy</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-reflect-asm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Registry -->
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-registry-zookeeper</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sijinghua.rpc</groupId>
+            <artifactId>myrpc-registry-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.sijinghua.rpc</groupId>
             <artifactId>myrpc-constants</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.sijinghua.rpc</groupId>
-            <artifactId>myrpc-registry-zookeeper</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.sijinghua.rpc</groupId>
-            <artifactId>myrpc-registry-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -15,6 +15,8 @@ import org.sijinghua.rpc.protocol.enumeration.RpcType;
 import org.sijinghua.rpc.protocol.header.RpcHeader;
 import org.sijinghua.rpc.protocol.request.RpcRequest;
 import org.sijinghua.rpc.protocol.response.RpcResponse;
+import org.sijinghua.rpc.reflect.api.ReflectInvoker;
+import org.sijinghua.rpc.spi.loader.ExtensionLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,13 +27,13 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
     private static final Logger logger = LoggerFactory.getLogger(RpcProviderHandler.class);
 
     // 采用哪种类型调用真实方法
-    private final String reflectType;
+    private ReflectInvoker reflectInvoker;
 
     private final Map<String, Object> handlerMap;
 
     public RpcProviderHandler(String reflectType, Map<String, Object> handlerMap) {
-        this.reflectType = reflectType;
         this.handlerMap = handlerMap;
+        this.reflectInvoker = ExtensionLoader.getExtension(ReflectInvoker.class, reflectType);
     }
 
     @Override
@@ -97,36 +99,6 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
                 logger.debug(parameter.toString());
             }
         }
-        return invokeMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
-    }
-
-    private Object invokeMethod(Object serviceBean, Class<?> serviceClass, String methodName,
-                                Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
-        switch (this.reflectType) {
-            case RpcConstants.REFLECT_TYPE_JDK:
-                return this.invokeJDKMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
-            case RpcConstants.REFLECT_TYPE_CGLIB:
-                return this.invokeCGLibMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
-            default:
-                throw new IllegalArgumentException("not support reflect type");
-        }
-    }
-
-    private Object invokeJDKMethod(Object serviceBean, Class<?> serviceClass, String methodName,
-                                   Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
-        // JDK reflect
-        logger.info("use jdk reflect proxy type invoke method...");
-        Method method = serviceClass.getMethod(methodName, parameterTypes);
-        method.setAccessible(true);
-        return method.invoke(serviceBean, parameters);
-    }
-
-    private Object invokeCGLibMethod(Object serviceBean, Class<?> serviceClass, String methodName,
-                                     Class<?>[] parameterTypes, Object[] parameters) throws Throwable {
-        // CGLib reflect
-        logger.info("use cglib proxy type invoke method...");
-        FastClass serviceFastClass = FastClass.create(serviceClass);
-        FastMethod serviceFastMethod = serviceFastClass.getMethod(methodName, parameterTypes);
-        return serviceFastMethod.invoke(serviceBean, parameters);
+        return this.reflectInvoker.invokeMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
     }
 }
